@@ -21,9 +21,8 @@ for player in players:
     player.clients = total_number_of_clients // 2
 left_clients = total_number_of_clients - (players[0].clients + players[1].clients)
 
-AI = 0.98
+AI = 0.1
 players[1].current_price = (random()+1)*cost_price  # int(input('Rand price: '))
-print(players[1].current_price)
 players[0].current_price = (AI+1)*cost_price
 
 end_of_game = False
@@ -66,4 +65,4 @@ for _ in range(number_of_quarters):
 #     elif players[0].profit == players[1].profit:
 #         print('Оба участника прекрасные бизнесмены. Это победная ничья!'.format(players[0].name, players[1].name))
 
-print('AI capital: {0} \nRand capital: {1}'.format(players[0].capital, players[1].capital))
+print('AI capital: {0} \nRand capital: {1}'.format(players[0].capital + random()*players[1].capital, players[1].capital+ random()*players[0].capital))

@@ -41,7 +41,6 @@ class Player:
 def end_of_quarter(cp):
     cp.produced_goods = start_capital // cost_price
     clients_left = 0
-    cp.past_capital = cp.capital
     if cp.produced_goods >= cp.clients:
         cp.sold_goods = cp.clients
         cp.capital = cp.sold_goods * (cp.current_price - cost_price) - cost_price * (cp.produced_goods - cp.clients)
