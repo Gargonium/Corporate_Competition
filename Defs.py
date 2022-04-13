@@ -12,32 +12,6 @@ class Player:
         self.clients = 0
 
 
-# def Players_move(cp):
-#     print('Ход игрока {0}'.format(players[current_player].name))
-#     print('Текущая цена: ')
-#     print('Капитал: ')
-#     print('Прибыль за прошлый квартал: ')
-#     print('Количество клиентов: ')
-#     print('Доступные действия:\n 1. Изменить цену\n 2. Узнать прибыль соперника\n 3. Закончить')
-#     while True:
-#         action = input()
-#         if action == '1':
-#             cp.current_price += int(input('Увеличить на: '))
-#             if cp.current_price < 0:
-#                 print('Цена не может быть отрицательной!!')
-#                 cp.current_price = 0
-#                 print('Текущая цена: 0')
-#         elif action == '2':
-#             for player in players:
-#                 if player != cp:
-#                     print('{0}: {1}'.format(player.name, player.profit))
-#         elif action == '3':
-#             cls()
-#             break
-#         else:
-#             print('Пожалуйста, напишите номер действия из списка')
-
-
 def end_of_quarter(cp):
     cp.produced_goods = start_capital // cost_price
     clients_left = 0
